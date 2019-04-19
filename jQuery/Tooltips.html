@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <title>Registration</title>
+</head>
+
+<body>
+    <div class="mx-auto" style="width: 700px;">
+        <h1>Registration</h1>
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <label for="inputfirstname">First Name</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="firstname" title="Enter your first name">
+                </div>
+                <div class="col">
+                    <label for="inputlastname">Last Name</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="lastname" title="Enter your last name">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="inputstreetaddress">Street address</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="streetaddress" title="Enter street address">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="inputpostalcode">Postal code</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="postalcode" title="Enter postal code">
+                </div>
+                <div class="col">
+                    <label for="inputcountry">Country</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="country" title="Enter country">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <label for="inputcompany">Company</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="company" title="Enter company">
+                </div>
+                <div class="col">
+                    <label for="inputemail">Email address</label>
+                    <input type="text" class="form-control" datatoggle="tooltip" id="emailaddress" title="Enter valid email address">
+                </div>
+            </div>
+            <label for="inputpaymentmethod">Payment Method</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios1" value="option1"
+                    checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Mastercard
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Visa
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios3" value="option3">
+                <label class="form-check-label" for="exampleRadios3">
+                    Billing
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary my-1">Submit</button>
+
+        </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+</body>
+
+</html>

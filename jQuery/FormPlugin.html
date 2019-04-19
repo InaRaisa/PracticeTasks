@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+  <title>Validation</title>
+</head>
+
+<body>
+  <div class="mx-auto" style="width: 700px;">
+    <h1>Registration</h1>
+    <form id="signupForm">
+      <div class="form-row">
+        <div class="col">
+          <label for="inputFirstname">First Name</label>
+          <input id="inputFirstname" name="firstname" type="text" class="form-control"
+            placeholder="Enter your first name" minlength="2" maxlength="40" required>
+        </div>
+        <div class="col">
+          <label for="inputLastname">Last Name</label>
+          <input id="inputLastname" name="lastname" type="text" class="form-control" placeholder="Enter your last name"
+            minlength="2" maxlength="40" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inputStreetSddress">Street address</label>
+          <input id="inputStreetAddress" name="streetaddress" type="text" class="form-control"
+            placeholder="Enter street address" minlength="5" maxlength="50" required></div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inputPostalcode">Postal code</label>
+          <input id="inputPostalcode" name="postalcode" type="text" class="form-control"
+            placeholder="Enter postal code" digits="true" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inputCountry">Country</label>
+          <input id="inputCountry" name="country" class="form-control" placeholder="Enter country" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="col">
+          <label for="inputCompany">Company</label>
+          <input id="inputCompany" name="company" type="text" class="form-control" placeholder="Enter company" required>
+        </div>
+        <div class="col">
+          <label for="inputEmail">Email address</label>
+          <input id="inputEmail" name="email" type="email" class="form-control" placeholder="Enter email" required>
+        </div>
+      </div>
+      <label for="inputPaymentmethod">Payment Method</label>
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios1" value="option1" checked>
+        <label class="form-check-label" for="Mastercard">
+          Mastercard
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios2" value="option2">
+        <label class="form-check-label" for="Visa">
+          Visa
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="paymentRadios" id="paymentRadios3" value="option3">
+        <label class="form-check-label" for="Billing">
+          Billing
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-primary my-1">Submit</button>
+
+    </form>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#signupForm").validate();
+    });
+  </script>
+</body>
+
+</html>

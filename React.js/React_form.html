@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>React getting started</title>
+</head>
+
+<body>
+    <!-- Root container for react components -->
+    <div id='root'></div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+      // Your scripts goes here
+        class HelloComponent extends React.Component {
+            constructor(props) {
+                super(props);
+                this.state = {firstname: '', lastname: ''};
+            }
+
+            inputChanged = (event) => {
+                this.setState({[event.target.name]: event.target.value});
+            }
+
+            formSubmit = (event) => {
+                event.preventDefault();
+                alert('Hello ' + this.state.firstname + " " + this.state.lastname);
+            }
+
+            render() {
+            return <div>
+                <form onSubmit={this.formSubmit}>
+                <input type="text" value={this.state.firstname} name="firstname" onChange={this.inputChanged} />
+                <input type="text" value={this.state.lastname} name="lastname" onChange={this.inputChanged} />
+                <input type="submit" value="Submit" />
+                </form>
+                </div>
+            }
+        }
+        ReactDOM.render(<HelloComponent />, document.getElementById('root'));
+    </script>
+</body>
+
+</html>
